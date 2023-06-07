@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+</head>
+<body>
+   <h1>This is Customer Page</h1>
+   <table border="2px solid red" cellpadding="4px">
+        <tr>
+            <th>CUSTOMER_ID</th>
+            <th>CUSTOMER_NAME</th>
+            <th>CUSTOMER_ACCOUNT_NO</th>
+            <th>CUSTOMER_ADDRESS</th>
+            <th>REQUIREMENT</th>
+            <th>BANK_ID</th>
+        </tr>
+        {% for i in cust %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.CName }}</td>
+                <td>{{ i.CAcno }}</td>
+                <td>{{ i.CAddr }}</td>
+                <td>{{ i.Requirement }}</td>
+                <td>{{ i.Bank_id }}</td>
+            </tr> 
+        {% endfor %}
+    </table>
+</body>
+</html>

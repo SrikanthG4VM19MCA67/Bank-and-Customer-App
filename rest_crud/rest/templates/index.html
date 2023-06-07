@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details</title>
+</head>
+<body>
+   <h1>This is Bank page</h1> 
+   <table border="2px solid red" cellpadding="4px">
+        <tr>
+            <th>ID</th>
+            <th>BANK_NAME</th>
+            <th>BRANCH</th>
+            <th>IFSC</th>
+        </tr>
+        {% for i in bank %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.BankName }}</td>
+                <td>{{ i.Branch }}</td>
+                <td>{{ i.IFSC }}</td>
+            </tr> 
+        {% endfor %}
+   </table>
+</body>
+</html>
